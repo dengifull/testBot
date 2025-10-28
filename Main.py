@@ -44,7 +44,10 @@ random_kurosaki_sticker_list = [
 ]
 
 random_aizen_sticker_list = [
-    {"text": "", 'sticker': ''}
+    {"text": "愛染　宗助", 'sticker': 'CAACAgUAAxkBAAIFYmkAAf5bYS0eIlGHWHEornoHdnCzbQACzREAAtNjSVaFgsydDj7-qjYE'},
+    {"text": "あいぜん　そうすけ", 'sticker': 'CAACAgIAAxkBAAIFYGkAAf5J8JPDT7xraUJFfDnYlb3YqQACgmoAAk3qcUoTYFt2RWNuEzYE'},
+    {"text": "ようこそ", 'sticker': 'CAACAgIAAxkBAAIFXmkAAf5GM7QyD_xkUu9QcngXVP2hygACYmsAAvZ0aUpcSzxp4yLauDYE'},
+    {"text": "aizen sousuke", 'sticker': 'CAACAgIAAxkBAAIFXGkAAf5DzcxfAy_V293jeDWs3LnybAACE2sAAkwBaUqF69OhN4p97jYE'}
 ]
 
 
@@ -81,8 +84,9 @@ async def answer_cmd(msg: types.Message):
     if 'порн' and 'не' in text:
             await msg.answer_sticker('CAACAgIAAxkBAAIEWWj8yspFJ4bT7P_H_foSGE2-R70oAAKpZgACQwJxSov50HGT4hv_NgQ')
     elif'порн' in text:
-            await msg.answer('へんたい！')
-            await msg.answer_sticker('CAACAgIAAxkBAAIEKWj6H4TbKhfSO8VGtp2GXBbBkFVaAAKEYAAChp7ZSmqdTRPVuLwSNgQ')
+            random_aizen = random.choice(random_aizen_sticker_list)
+            await msg.answer(random_aizen['text'])
+            await msg.answer_sticker(random_aizen['sticker'])
     elif 'aizen' == text:
         await msg.answer('ようこそ、私の世界へ')
         await msg.answer_sticker('CAACAgIAAxkBAAIET2j6IkT39QxU2vm9WjqtnPqOdGZUAAIqZgACLz9oShsTSP-HXj6aNgQ')
