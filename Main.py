@@ -88,8 +88,9 @@ async def answer_cmd(msg: types.Message):
             await msg.answer(random_aizen['text'])
             await msg.answer_sticker(random_aizen['sticker'])
     elif 'aizen' == text:
-        await msg.answer('ようこそ、私の世界へ')
-        await msg.answer_sticker('CAACAgIAAxkBAAIET2j6IkT39QxU2vm9WjqtnPqOdGZUAAIqZgACLz9oShsTSP-HXj6aNgQ')
+        random_aizen = random.choice(random_aizen_sticker_list)
+        await msg.answer(random_aizen['text'])
+        await msg.answer_sticker(random_aizen['sticker'])
     elif 'kurosaki' == text:
         random_kurosaki = random.choice(random_kurosaki_sticker_list)
         await msg.answer(random_kurosaki['text'])
