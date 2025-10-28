@@ -43,6 +43,10 @@ random_kurosaki_sticker_list = [
      {'text': 'くろさき🤯', 'sticker': 'CAACAgUAAxkBAAIEpmj8zTmDe9w5pwTybWCleuSpTXIDAAJsDwAC2BXYVWiOHA2-8WHcNgQ'}
 ]
 
+random_aizen_sticker_list = [
+    {"text": "", 'sticker': ''}
+]
+
 
 
 bot = Bot(token=TOKEN)
